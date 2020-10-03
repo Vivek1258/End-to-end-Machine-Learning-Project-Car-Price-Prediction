@@ -15,7 +15,7 @@ html_temp = """
     """
 
 st.markdown(html_temp,unsafe_allow_html=True)
-model = pickle.load(open('cars_random_forest_regression_model.pkl', 'rb'))
+model = pickle.load(open('models/cars_random_forest_regression_model.pkl', 'rb'))
 
 Year = int(st.number_input("Year of purchase"))
 Present_Price=st.number_input("What is the Showroom Price?(In lakhs)")
