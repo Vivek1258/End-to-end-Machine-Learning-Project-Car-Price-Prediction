@@ -4,7 +4,7 @@
 
 #### Dataset: [vehicle dataset from cardekho.com](https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho)
 
-#### Algorithm : random forest regression
+#### Algorithm : random_forest_regression
 
 ## setup
 ```
