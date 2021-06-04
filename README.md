@@ -1,10 +1,12 @@
 # Car-Price-Prediction 
 
+###   Random Forest Regression 🌟, Streamlit UI 🚀, Heroku Cloud :partly_sunny:
+
 ##### live app : https://carpricep.herokuapp.com/
 
 #### Dataset: [vehicle dataset from cardekho.com](https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho)
 
-#### Algorithm : random forest egression
+#### Algorithm : Random Forest Regression
 
 ## setup
 ```
