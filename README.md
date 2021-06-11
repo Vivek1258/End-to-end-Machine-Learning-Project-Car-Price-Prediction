@@ -16,6 +16,7 @@ cd Car-Price-Prediction-using-random_forest_regression
 
 pip install -r requitements.txt
 
+
 streamlit run app.py
 ```
 
