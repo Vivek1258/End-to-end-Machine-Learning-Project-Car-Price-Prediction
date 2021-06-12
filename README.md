@@ -71,10 +71,10 @@ Transmission_Mannual : 1 if the Transmission type is Manual or 0 is the Transmis
   }
 
 
-	# sending get request and saving the response as response object
-	r = requests.get(url = URL, json = PARAMS)  
-	  
-	# Get the status code 
+  # sending get request and saving the response as response object
+  r = requests.get(url = URL, json = PARAMS)  
+
+  # Get the status code 
   SC = r.status_code 
 	print(SC)
   
@@ -89,7 +89,7 @@ Transmission_Mannual : 1 if the Transmission type is Manual or 0 is the Transmis
 ![image](https://user-images.githubusercontent.com/53163419/121782138-c17b2100-cbc5-11eb-8578-2248178d2cfa.png)
 
 
-#### Dataset
+## Dataset
 
 Dataset used for the treaninf and testing : [vehicle dataset from cardekho.com](https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho)
 
@@ -118,7 +118,7 @@ Here the indipedent variable is Selling_Price
 ![image](https://user-images.githubusercontent.com/53163419/121782385-e2904180-cbc6-11eb-8ecd-0bdfd22d87ed.png)
 
 
-#### Algorithm : Random Forest Regression
+## Algorithm : Random Forest Regression
 
 
 Random forest is a supervised learning algorithm. The "forest" it builds, is an ensemble of decision trees, usually trained with the “bagging” method. The general idea of the bagging method is that a combination of learning models increases the overall result.
