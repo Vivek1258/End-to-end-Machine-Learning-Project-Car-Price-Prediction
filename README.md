@@ -111,7 +111,6 @@ Seller_Type
 Transmission
 Owner
 ```
-Here the indipedent variable is Selling_Price 
 
 ### The corrilation between features can be expressed as:
 
