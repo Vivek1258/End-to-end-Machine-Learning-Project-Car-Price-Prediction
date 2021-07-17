@@ -2,9 +2,12 @@ import pickle
 
 import numpy as np 
 
+from transforms import transformer
+
 model = pickle.load(open('Server/models/cars_random_forest_regression_model.pkl', 'rb'))
 
 
+tr = transformer(m_path = "train/meta_data")
 
 
 def getpred(Present_Price,
@@ -16,7 +19,12 @@ def getpred(Present_Price,
 			Seller_Type_Individual,
 			Transmission_Mannual):
 
-	Kms_Driven2=np.log(Kms_Driven)
+	
+	Present_Price = tr.norm_Present_Price(Present_Price)
+
+	Kms_Driven = tr.norm_Kms_Driven(Kms_Driven)
+
+	Year = tr.norm_Year(Year)
 
 	prediction = model.predict([[Present_Price,
 							   Kms_Driven2,
@@ -27,4 +35,6 @@ def getpred(Present_Price,
 							   Seller_Type_Individual,
 							   Transmission_Mannual]])
 
-	return np.round(prediction[0] , 2)
+	pred = tr.de_norm_Selling_Price(prediction[0])
+
+	return np.round(pred , 2)
