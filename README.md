@@ -29,9 +29,9 @@ In this project, I have developed a web application that can Predict the Selling
 
 ![image](https://user-images.githubusercontent.com/53163419/121781790-00a87280-cbc4-11eb-86b3-5161423e9205.png)
 
-## Live API 
+<!-- ## Live API  -->
 
-### Link : https://carppp.herokuapp.com/getcp 
+<!-- ### Link : https://carppp.herokuapp.com/getcp  -->
 
 ### Input arguments 
 
