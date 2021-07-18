@@ -76,10 +76,10 @@ Transmission_Mannual : 1 if the Transmission type is Manual or 0 is the Transmis
 
   # Get the status code 
   SC = r.status_code 
-	print(SC)
+  print(SC)
   
   # extracting data in json format
-	data = r.json()
+  data = r.json()
   print(data)
   
 ```
