@@ -7,7 +7,7 @@ from Server.transforms import transformer
 model = pickle.load(open('Server/models/cars_random_forest_regression_model.pkl', 'rb'))
 
 
-tr = transformer(m_path = "train/meta_data")
+tr = transformer(m_path = "./Train/meta_data")
 
 
 def getpred(Present_Price,
