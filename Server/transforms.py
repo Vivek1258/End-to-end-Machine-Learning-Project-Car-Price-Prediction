@@ -3,30 +3,29 @@
 ### Python script to perform 
 ### Feature Scealing 
 
+import pickle 
+
+def load_file(filename):
+        with open(filename , 'rb') as f:
+            x = pickle.load(f)
+        return x['Normalization_Params']
+
 class transformer(object):
 
-	"""docstring for transformer"""
-	def __init__(self, m_path = "train/meta_data" ):
-		super(transformer, self).__init__()
-		self.mata_data = __load_file(m_path)
+    def __init__(self, m_path = "train/meta_data" ):
+        super(transformer, self).__init__()
+        self.mata_data = load_file(m_path)
+        # print(self.mata_data)
+
+    def norm_Present_Price(self, Present_Price):
+    	return (Present_Price - self.mata_data['min_present_price'] ) / (  self.mata_data['max_present_price'] - self.mata_data['min_present_price'])
 
 
-	def __load_file(filename):
+    def norm_Kms_Driven(self, Kms_Driven):
+    	return ( Kms_Driven - self.mata_data['min_kms_driven'] ) / (  self.mata_data['max_kms_driven'] - self.mata_data['min_kms_driven'])
 
-		with open('filename', 'rb') as f:
-    			x = pickle.load(f)
+    def norm_Years_used(self, Years_used):
+        return (Years_used - self.mata_data['min_years_used'] ) / (  self.mata_data['max_years_used'] - self.mata_data['min_years_used'])
 
-    	return x 
-
-    def norm_Present_Price(Present_Price):
-    	return (Present_Price - mata_data[min_present_price] ) / (  mata_data[max_present_price] - mata_data[min_present_price])
-
-
-    def norm_Kms_Driven(Kms_Driven):
-    	return ( Kms_Driven - mata_data[min_kms_driven] ) / (  mata_data[max_kms_driven] - mata_data[min_kms_driven])
-	
-    def norm_Years_used(Years_used):
-    return (Years_used - mata_data[min_years_used] ) / (  mata_data[max_years_used] - mata_data[min_years_used])
-
-    def de_norm_Selling_Price(Selling_Price):
-    	return (Selling_Price*(  mata_data[max_selling_price] - mata_data[min_selling_price]) ) + mata_data[min_selling_price] 
+    def de_norm_Selling_Price(self, Selling_Price):
+    	return (Selling_Price*(  self.mata_data['max_selling_price'] - self.mata_data['min_selling_price']) ) + self.mata_data['min_selling_price'] 
