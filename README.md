@@ -32,7 +32,7 @@ In this project, I have developed a web application that can Predict the Selling
 
 ## API 
 
-### Link : https://carppp.herokuapp.com/getcp  
+##### Link : https://carppp.herokuapp.com/getcp  
 
 ### Input arguments 
 
